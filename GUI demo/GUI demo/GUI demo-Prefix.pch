@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GUI demo' target in the 'GUI demo' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
