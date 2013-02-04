@@ -10,4 +10,11 @@
 
 @implementation Game
 
+-(void)rollWithPinCount:(int)pins{
+    
+}
+
+-(int)score {
+    return -1;
+}
 @end
