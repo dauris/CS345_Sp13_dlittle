@@ -3,7 +3,7 @@
 */
 
     // Class under test
-#import "Class Header"
+#import "Game.h"
 
     // Collaborators
 
@@ -22,13 +22,18 @@
  @brief For testing GameTest
  */
 @interface GameTest : SenTestCase
+-(void)rollWithPinsCount:(int)pins;
+
+-(int)score;
 @end
 
 @implementation GameTest
 {
     // test fixture ivars go here
 }
--
+-(void)testGutterGame{
+    Game *game=[[Game alloc] init];
+}
 - (void)setUp
 {
     [super setUp];

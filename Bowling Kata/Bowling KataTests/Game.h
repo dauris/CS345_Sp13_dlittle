@@ -13,5 +13,4 @@
 -(void)rollWithPinCount:(int)pins;
 
 -(int)score;
-
 @end
