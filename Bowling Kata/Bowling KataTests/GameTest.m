@@ -3,7 +3,7 @@
 */
 
     // Class under test
-#import "<#Class Header#>"
+#import "Class Header"
 
     // Collaborators
 
@@ -19,7 +19,7 @@
 #import <OCMockito/OCMockito.h>
 
 /**
- @brief For testing <#GameTest#>
+ @brief For testing GameTest
  */
 @interface GameTest : SenTestCase
 @end
@@ -28,20 +28,20 @@
 {
     // test fixture ivars go here
 }
-
+-
 - (void)setUp
 {
     [super setUp];
-    <#set up#>
+    set up
 }
 
 - (void)tearDown
 {
-    <#tear down#>
+    tear down
     [super tearDown];
 }
 
-- (void)test<#FooShouldBar#>
+- (void)testFooShouldBar
 {
     // given
     

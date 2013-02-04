@@ -21,6 +21,7 @@
 		E982A23016B22FD0003E3548 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E982A22B16B22FBF003E3548 /* OCHamcrest.framework */; };
 		E982A23116B22FD0003E3548 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E982A22C16B22FBF003E3548 /* OCMockito.framework */; };
 		E982A23416B22FEE003E3548 /* GameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E982A23216B22FEE003E3548 /* GameTest.m */; };
+		EDD3E58116C00DD50063E423 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD3E58016C00DD50063E423 /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		E982A22B16B22FBF003E3548 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
 		E982A22C16B22FBF003E3548 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Frameworks/OCMockito.framework; sourceTree = "<group>"; };
 		E982A23216B22FEE003E3548 /* GameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTest.m; sourceTree = "<group>"; };
+		EDD3E57F16C00DD50063E423 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		EDD3E58016C00DD50063E423 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				E982A23216B22FEE003E3548 /* GameTest.m */,
+				EDD3E57F16C00DD50063E423 /* Game.h */,
+				EDD3E58016C00DD50063E423 /* Game.m */,
 				E982A21B16B22F3C003E3548 /* Supporting Files */,
 			);
 			path = "Bowling KataTests";
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E982A23416B22FEE003E3548 /* GameTest.m in Sources */,
+				EDD3E58116C00DD50063E423 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +482,7 @@
 				E982A22716B22F3C003E3548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E982A22816B22F3C003E3548 /* Build configuration list for PBXNativeTarget "Bowling KataTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +491,7 @@
 				E982A22A16B22F3C003E3548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
