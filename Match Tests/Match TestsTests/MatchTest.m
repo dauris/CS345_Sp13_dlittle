@@ -37,7 +37,7 @@
     _case1match = equalToIgnoringCase(@"hello, world");       //REPLACE WITH YOUR OWN MATCHER
     _case2match = hasCount(lessThanOrEqualTo(@9)); //REPLACE WITH YOUR OWN MATCHER
     _case3match = onlyContains(@"eao", nil);          //REPLACE WITH YOUR OWN MATCHER
-    _case4match = greaterThanOrEqualTo;      //REPLACE WITH YOUR OWN MATCHER
+    _case4match = hasItem(closeTo(42, 1));      //REPLACE WITH YOUR OWN MATCHER
 }
 
 //Case 1
