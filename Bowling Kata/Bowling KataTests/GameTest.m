@@ -27,9 +27,8 @@
 -(int)score;
 @end
 
-@implementation GameTest
-{
-    // test fixture ivars go here
+@implementation GameTest {
+    Game *game;
 }
 -(void)testGutterGame{
     Game *game=[[Game alloc] init];
@@ -48,12 +47,12 @@
 - (void)setUp
 {
     [super setUp];
-    set up
+    game =[[Game alloc] init];
 }
 
 - (void)tearDown
 {
-    tear down
+    game = nil;
     [super tearDown];
 }
 
