@@ -36,9 +36,8 @@
 }
 
 -(void)testAllOnes {
-    
-        STAssertEquals([game score], 20, nil);
-    }
+    [self rollsPins:1 times:20];
+    STAssertEquals([game score], 20, nil);
 }
 
 -(void)rollsPins:(int)pins times:(int)n{
