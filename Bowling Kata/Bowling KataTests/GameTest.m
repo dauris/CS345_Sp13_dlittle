@@ -37,6 +37,14 @@
         [game rollWithPinCount:0];
     STAssertEquals([game score], 0, nil);
 }
+
+-(void)testAllOnes {
+    Game *game=[[Game alloc] init];
+    for (int i=0; i<20; ++i) {
+        [game rollWithPinCount:1];
+        STAssertEquals([game score], 20, nil);
+    }
+}
 - (void)setUp
 {
     [super setUp];
