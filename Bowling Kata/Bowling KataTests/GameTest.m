@@ -22,28 +22,36 @@
  @brief For testing GameTest
  */
 @interface GameTest : SenTestCase
--(void)rollWithPinsCount:(int)pins;
 
--(int)score;
 @end
 
 @implementation GameTest {
     Game *game;
 }
+
+-(void)rollPins:(int)pins times:(int)n{
+    for (int i = 0; i<20; ++i)
+        [game rollWithPinCount:pins];
+}
+
 -(void)testGutterGame{
-    [self rollsPins:pins times:n];
+    [self rollPins:0 times:20];
     STAssertEquals([game score], 0, nil);
 }
 
 -(void)testAllOnes {
-    [self rollsPins:1 times:20];
+    [self rollPins:1 times:20];
     STAssertEquals([game score], 20, nil);
 }
 
--(void)rollsPins:(int)pins times:(int)n{
-    for (int i = 0; i<20; ++i)
-        [game rollWithPinCount:0];
+-(void)testOneSpare {
+    [game rollWithPinCount:5];
+    [game rollWithPinCount:5];
+    [game rollWithPinCount:3];
+    [self rollPins:0 times:17];
+    STAssertEquals([game score], 16, nil);
 }
+
 - (void)setUp
 {
     [super setUp];
