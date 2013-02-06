@@ -9,14 +9,18 @@
 #import "Game.h"
 
 @implementation Game {
-    int score;
+    int rolls[21];
+    int currentRoll;
 }
 
 -(void)rollWithPinCount:(int)pins{
-    score += pins;
+    rolls[currentRoll++] = pins;
 }
 
 -(int)score {
+    int score = 0;
+    for (int i = 0; i < 21; ++i)
+        score += rolls[i];
     return score;
 }
 @end
