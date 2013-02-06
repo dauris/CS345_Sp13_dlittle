@@ -31,18 +31,20 @@
     Game *game;
 }
 -(void)testGutterGame{
-    Game *game=[[Game alloc] init];
-    for (int i = 0; i<20; ++i)
-        [game rollWithPinCount:0];
+    [self rollsPins:pins times:n];
     STAssertEquals([game score], 0, nil);
 }
 
 -(void)testAllOnes {
-    Game *game=[[Game alloc] init];
     for (int i=0; i<20; ++i) {
         [game rollWithPinCount:1];
         STAssertEquals([game score], 20, nil);
     }
+}
+
+-(void)rollsPins:(int)pins times:(int)n{
+    for (int i = 0; i<20; ++i)
+        [game rollWithPinCount:0];
 }
 - (void)setUp
 {
