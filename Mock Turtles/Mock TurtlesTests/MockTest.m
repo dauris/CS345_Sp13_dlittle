@@ -79,7 +79,8 @@
     //when
     //TODO: Write code which will send the expected messages to the S.U.T.
     
-
+    [sut valueForKey:@"We"];
+    [sut valueForKey:@"Weight"];
     //then
     [verifyCount(sut, atLeast(2)) valueForKey:(id) startsWith(@"We")];
     [verifyCount(sut, never()) valueForKey:(id) startsWith(@"Wel")];
