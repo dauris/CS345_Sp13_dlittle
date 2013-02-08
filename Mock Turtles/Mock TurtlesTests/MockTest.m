@@ -72,6 +72,7 @@
 
     // then
     // TODO: Verify that our S.U.T. had a -setValue:forKey: message sent to it
+    verify(sut)
 }
 
 -(void)testWhenStage
