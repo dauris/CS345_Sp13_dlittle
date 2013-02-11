@@ -11,6 +11,9 @@
 @interface iCViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *CalculatorScreen;
+
+- (IBAction)buttonZero:(id)sender;
+
 - (IBAction)buttonOne:(id)sender;
 
 - (IBAction)buttonTwo:(id)sender;

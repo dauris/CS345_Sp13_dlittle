@@ -26,6 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonZero:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Zero"];
+}
+
 - (IBAction)buttonOne:(id)sender {
     NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
     [[self CalculatorScreen] setText:@"One"];
@@ -36,11 +41,15 @@
     [[self CalculatorScreen] setText:@"Two"];
 }
 
-//- (IBAction)buttonThree:(id)sender {
-//}
+- (IBAction)buttonThree:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Three"];
+}
 
-//- (IBAction)buttonFour:(id)sender {
-//}
+- (IBAction)buttonFour:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Four"];
+}
 
 - (IBAction)buttonFive:(id)sender {
     NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
@@ -48,17 +57,25 @@
     
 }
 
-//- (IBAction)buttonSix:(id)sender {
-//}
+- (IBAction)buttonSix:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Six"];
+}
 
-//- (IBAction)buttonSeven:(id)sender {
-//}
+- (IBAction)buttonSeven:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Seven"];
+}
 
-//- (IBAction)buttonEight:(id)sender {
-//}
+- (IBAction)buttonEight:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Eight"];
+}
 
-//- (IBAction)buttonNine:(id)sender {
-//}
+- (IBAction)buttonNine:(id)sender {
+    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    [[self CalculatorScreen] setText:@"Nine"];
+}
 
 
 @end
