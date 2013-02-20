@@ -10,8 +10,10 @@
 
 @interface iCViewController : UIViewController
 
+//Calculator screen
 @property (weak, nonatomic) IBOutlet UILabel *CalculatorScreen;
 
+//numbers to be used
 - (IBAction)buttonZero:(id)sender;
 
 - (IBAction)buttonOne:(id)sender;
@@ -32,6 +34,7 @@
 
 - (IBAction)buttonNine:(id)sender;
 
+//All the operations
 - (IBAction)buttonEqual:(id)sender;
 
 - (IBAction)buttonAdd:(id)sender;

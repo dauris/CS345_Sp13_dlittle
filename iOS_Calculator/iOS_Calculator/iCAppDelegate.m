@@ -7,7 +7,7 @@
 //
 
 #import "iCAppDelegate.h"
-
+#import "Calcaulator.h"
 #import "iCViewController.h"
 
 @implementation iCAppDelegate
@@ -19,6 +19,7 @@
     self.viewController = [[iCViewController alloc] initWithNibName:@"iCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

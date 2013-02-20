@@ -10,4 +10,12 @@
 
 @interface Calcaulator : NSObject
 
+@property NSNumber* numberOnScreen;
+
+@property NSNumber* numberAccumulated;
+
+@property NSString* operationPending;
+
+-(void)pressKey:(char) Q;
+
 @end

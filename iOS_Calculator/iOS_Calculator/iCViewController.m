@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	NSLog(@"Message %@ recieve by %@", NSStringFromSelector(_cmd), self);
+    [[self CalculatorScreen] setNumberOfLines:@"0"];
 }
 
 - (void)didReceiveMemoryWarning
