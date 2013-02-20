@@ -23,6 +23,7 @@
 		ED35E6F616C5453F001ED82E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED35E6D116C5453F001ED82E /* Foundation.framework */; };
 		ED35E6FE16C5453F001ED82E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED35E6FC16C5453F001ED82E /* InfoPlist.strings */; };
 		ED35E70116C5453F001ED82E /* iOS_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED35E70016C5453F001ED82E /* iOS_CalculatorTests.m */; };
+		ED522C7E16D5880D00B62A43 /* Calcaulator.m in Sources */ = {isa = PBXBuildFile; fileRef = ED522C7D16D5880D00B62A43 /* Calcaulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		ED35E6FD16C5453F001ED82E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED35E6FF16C5453F001ED82E /* iOS_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_CalculatorTests.h; sourceTree = "<group>"; };
 		ED35E70016C5453F001ED82E /* iOS_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_CalculatorTests.m; sourceTree = "<group>"; };
+		ED522C7C16D5880D00B62A43 /* Calcaulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calcaulator.h; sourceTree = "<group>"; };
+		ED522C7D16D5880D00B62A43 /* Calcaulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calcaulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				ED35E6E716C5453F001ED82E /* iCViewController.h */,
 				ED35E6E816C5453F001ED82E /* iCViewController.m */,
 				ED35E6EA16C5453F001ED82E /* iCViewController.xib */,
+				ED522C7C16D5880D00B62A43 /* Calcaulator.h */,
+				ED522C7D16D5880D00B62A43 /* Calcaulator.m */,
 				ED35E6D616C5453F001ED82E /* Supporting Files */,
 			);
 			path = iOS_Calculator;
@@ -274,6 +279,7 @@
 				ED35E6DC16C5453F001ED82E /* main.m in Sources */,
 				ED35E6E016C5453F001ED82E /* iCAppDelegate.m in Sources */,
 				ED35E6E916C5453F001ED82E /* iCViewController.m in Sources */,
+				ED522C7E16D5880D00B62A43 /* Calcaulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +454,7 @@
 				ED35E70616C5453F001ED82E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED35E70716C5453F001ED82E /* Build configuration list for PBXNativeTarget "iOS_CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				ED35E70916C5453F001ED82E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
