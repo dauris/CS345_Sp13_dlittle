@@ -7,17 +7,20 @@
 //
 
 #import "iCViewController.h"
+#import "Calcaulator.h"
 
-@interface iCViewController ()
-
-@end
-
-@implementation iCViewController
-
+@implementation iCViewController{
+    //add pointer 
+    Calcaulator* _screen;
+}
+//adjusting for the pointer
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	NSLog(@"Message %@ recieve by %@", NSStringFromSelector(_cmd), self);
+    //added 
+    _screen=[[Calcaulator alloc]init];
+    
     [[self CalculatorScreen] setNumberOfLines:@"0"];
 }
 
@@ -28,28 +31,54 @@
 }
 
 - (IBAction)buttonZero:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Zero"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Zero"
+                 keyChar:'0'];
+    //NSString* keyText=@"Zero";
+    //char keyChar ='0';
+    //NSString* actionExcuted=NSStringFromSelector(_cmd);
+    //NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
+    //[[self CalculatorScreen] setText:keyText];
+    //[_screen pressKey:keyChar];
 }
 
 - (IBAction)buttonOne:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"One"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"One"
+                 keyChar:'1'];
+}
+
+- (void)buttonResponse:(id)sender
+         actionExcuted:(NSString *)actionExcuted
+               keyText:(NSString *)keyText
+               keyChar:(char)keyChar {
+    NSLog(@"Message %@ recieved by %@ with argument %@", actionExcuted, self, sender);
+    [[self CalculatorScreen] setText:keyText];
+    [_screen pressKey:keyChar];
 }
 
 - (IBAction)buttonTwo:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Two"];
+    //refactoring
+    NSString* keyText=@"Two";
+    char keyChar ='2';
+    NSString* actionExcuted=NSStringFromSelector(_cmd);
+    [self buttonResponse:sender actionExcuted:actionExcuted keyText:keyText keyChar:keyChar];
 }
 
 - (IBAction)buttonThree:(id)sender {
     NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
     [[self CalculatorScreen] setText:@"Three"];
+        [_screen pressKey:'3'];
 }
 
 - (IBAction)buttonFour:(id)sender {
     NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
     [[self CalculatorScreen] setText:@"Four"];
+        [_screen pressKey:'5'];
 }
 
 - (IBAction)buttonFive:(id)sender {
