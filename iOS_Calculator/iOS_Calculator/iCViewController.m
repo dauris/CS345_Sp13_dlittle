@@ -63,73 +63,106 @@
 
 - (IBAction)buttonTwo:(id)sender {
     //refactoring
-    NSString* keyText=@"Two";
-    char keyChar ='2';
-    NSString* actionExcuted=NSStringFromSelector(_cmd);
-    [self buttonResponse:sender actionExcuted:actionExcuted keyText:keyText keyChar:keyChar];
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Two"
+                 keyChar:'2'];
 }
 
 - (IBAction)buttonThree:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Three"];
-        [_screen pressKey:'3'];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Three"
+                 keyChar:'3'];
 }
 
 - (IBAction)buttonFour:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Four"];
-        [_screen pressKey:'5'];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Four"
+                 keyChar:'4'];
 }
 
 - (IBAction)buttonFive:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Five"];
-    
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Five"
+                 keyChar:'5'];    
 }
 
 - (IBAction)buttonSix:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Six"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Six"
+                 keyChar:'6'];
 }
 
 - (IBAction)buttonSeven:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Seven"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Seven"
+                 keyChar:'7'];
 }
 
 - (IBAction)buttonEight:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Eight"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Eight"
+                 keyChar:'8'];
 }
 
 - (IBAction)buttonNine:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Nine"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Nine"
+                 keyChar:'9'];
 }
 
 - (IBAction)buttonEqual:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Equal"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Equal"
+                 keyChar:'='];
 }
 
 - (IBAction)buttonAdd:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Add"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@(+)
+                 keyChar:'+'];
 }
 
 - (IBAction)buttonSubtract:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Subtract"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@(-)
+                 keyChar:'-'];
 }
 
 - (IBAction)buttonMultiply:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Multiply"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@(*)4
+                 keyChar:'*'];
 }
 
 - (IBAction)buttonDivide:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Divide"];
+    //refactoring
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@(/)
+                 keyChar:'/'];
 }
 
 - (IBAction)buttonClear:(id)sender {
@@ -143,13 +176,14 @@
 }
 
 - (IBAction)buttonMod:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Mode"];
+
 }
 
 - (IBAction)buttonDecimal:(id)sender {
-    NSLog(@"Message %@ recieved by %@ with argument %@", NSStringFromSelector(_cmd), self, sender);
-    [[self CalculatorScreen] setText:@"Decimal Inserted"];
+    [self buttonResponse:sender
+           actionExcuted:NSStringFromSelector(_cmd)
+                 keyText:@"Decimal"
+                 keyChar:'.'];
 }
 
 
