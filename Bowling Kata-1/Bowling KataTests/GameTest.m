@@ -52,6 +52,10 @@
     [game rollWithPinCount:5];
 }
 
+-(void)rollStrike {
+    [game rollWithPinCount:10];
+}
+
 - (void)testGutterGame
 {
     [self rollPins: 0 times: 20];
@@ -70,6 +74,11 @@
     [self rollPins:0 times:17];
     STAssertEquals([game score], 16, nil);
     
+}
+
+-(void)testPerfectGame {
+    [self rollPins:10 times:12];
+    STAssertEquals([game score], 300, nil);
 }
 
 @end
