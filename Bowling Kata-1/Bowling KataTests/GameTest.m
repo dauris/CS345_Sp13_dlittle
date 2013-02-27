@@ -47,6 +47,11 @@
     }
 }
 
+-(void)rollSpare {
+    [game rollWithPinCount:5];
+    [game rollWithPinCount:5];
+}
+
 - (void)testGutterGame
 {
     [self rollPins: 0 times: 20];
@@ -60,8 +65,7 @@
 }
 
 -(void)testOneSpare {
-    [game rollWithPinCount:5];
-    [game rollWithPinCount:5];
+    [self rollSpare];
     [game rollWithPinCount:3];
     [self rollPins:0 times:17];
     STAssertEquals([game score], 16, nil);
