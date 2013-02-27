@@ -26,24 +26,23 @@
 
 @implementation GameTest
 {
-    // test fixture ivars go here
+    Game *game;
 }
 
 - (void)setUp
 {
-   // [super setUp];
-    //<#set up#>
+   [super setUp];
+    game = [[Game alloc] init];
 }
 
 - (void)tearDown
 {
-    //<#tear down#>
-    //[super tearDown];
+    game = nil;
+    [super tearDown];
 }
 
 - (void)testGutterGame
 {
-    Game *game =[[Game alloc]init];
     for (int i = 0; i < 20; ++i) {
         [game rollWithPinCount:0];
         STAssertEquals([game score], 0, nil);
@@ -51,7 +50,6 @@
 }
 
 -(void)testAllOnes {
-    Game *game = [[Game alloc] init];
     for (int i = 0; i < 20; ++i) {
         [game rollWithPinCount:1];
         STAssertEquals([game score], 20, nil);
