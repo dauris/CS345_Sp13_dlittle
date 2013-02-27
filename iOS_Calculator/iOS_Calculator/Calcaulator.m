@@ -20,23 +20,6 @@
 
 -(void)pressKey:(char)Q {
     
-    q = Q;
-    
-    switch (Q) {
-        case '+':
-            Q = @"+";
-            break;
-        case '-':
-            Q = @"-";
-            break;
-        case '*':
-            Q=@"*";
-            break;
-        case '/':
-            Q=@"/";
-            break;
-        default:
-            break;
-    }
-};
+
+}
 @end
