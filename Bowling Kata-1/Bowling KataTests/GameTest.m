@@ -50,5 +50,12 @@
     }
 }
 
+-(void)testAllOnes {
+    Game *game = [[Game alloc] init];
+    for (int i = 0; i < 20; ++i) {
+        [game rollWithPinCount:1];
+        STAssertEquals([game score], 20, nil);
+    }
+}
 
 @end
