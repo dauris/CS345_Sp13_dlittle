@@ -14,7 +14,7 @@
 }
 
 -(int)score {
-    return -1;
+    return 0;
 }
 
 
