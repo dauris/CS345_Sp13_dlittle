@@ -6,4 +6,8 @@
 
 @interface Example : NSObject
 
+-(id)initWithUserDefauts:(NSUserDefaults *)userDefault;
+
+-(NSNumber *)nextReminderId;
+
 @end

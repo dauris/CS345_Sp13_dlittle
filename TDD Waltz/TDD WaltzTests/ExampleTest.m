@@ -3,7 +3,7 @@
 */
 
     // Class under test
-#import "<#Class Header#>"
+#import "Example.h"
 
     // Collaborators
 
@@ -35,19 +35,20 @@
 //    <#set up#>
 //}
 
-- (void)test<#FooShouldBar#>
-{
-    // given
+- (void)testNextReminderIdWithNoCurrentReminderIdUserDefaultsShouldReturnZero {
     
+    // given
+    NSUserDefaults* mockUserDefaults = mock([NSUserDefaults class]);
+    Example* sut = [[Example alloc]initWithUserDefauts:mockUserDefaults];
     // when
     
     // then
-    STFail(@"Unit tests are not implemented yet in ExampleTest");
+    assertThat([sut nextReminderId], is(equalTo(@0)));
 }
 
 //- (void)tearDown
 //{
-//    <#tear down#>
+//    
 //    [super tearDown];
 //}
 
