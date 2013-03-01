@@ -26,32 +26,27 @@
 
 @implementation ExampleTest
 {
-    // test fixture ivars go here
+    NSUserDefaults* mockUserDefaults;
+    Example* sut;
 }
 
-//- (void)setUp
-//{
-//    [super setUp];
-//    <#set up#>
-//}
-
+-(void)setUp {
+    
+    [super setUp];
+    mockUserDefaults = mock([NSUserDefaults class]);
+    sut = [[Example alloc]initWithUserDefauts:mockUserDefaults];
+    [given([mockUserDefaults objectForKey:@"currentReminderId"])willReturn:nil];
+}
 - (void)testNextReminderIdWithNoCurrentReminderIdUserDefaultsShouldReturnZero {
     
-    // given
-    NSUserDefaults* mockUserDefaults = mock([NSUserDefaults class]);
-    Example* sut = [[Example alloc]initWithUserDefauts:mockUserDefaults];
-    [given([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:nil];
-    // when
-    [sut nextReminderId];
-    // then
-    [verify(mockUserDefaults)setObject:@0 forKey:@"currentReminderId"];
+        [verify(mockUserDefaults)setObject:@0 forKey:@"currentReminderId"];
 }
 
-//- (void)tearDown
-//{
-//    
-//    [super tearDown];
-//}
+-(void)tearDown {
+    
+    sut = nil;
+    [super tearDown];
+}
 
 
 @end
