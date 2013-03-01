@@ -40,10 +40,11 @@
     // given
     NSUserDefaults* mockUserDefaults = mock([NSUserDefaults class]);
     Example* sut = [[Example alloc]initWithUserDefauts:mockUserDefaults];
+    [given([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:nil];
     // when
-    
+    [sut nextReminderId];
     // then
-    assertThat([sut nextReminderId], is(equalTo(@0)));
+    [verify(mockUserDefaults)setObject:@0 forKey:@"currentReminderId"];
 }
 
 //- (void)tearDown
