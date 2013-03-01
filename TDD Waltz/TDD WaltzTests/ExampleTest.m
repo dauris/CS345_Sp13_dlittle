@@ -39,7 +39,8 @@
 }
 - (void)testNextReminderIdWithNoCurrentReminderIdUserDefaultsShouldReturnZero {
     
-        [verify(mockUserDefaults)setObject:@0 forKey:@"currentReminderId"];
+    [given([mockUserDefaults objectForKey:@"currentReminderId"])willReturn:@3];
+    assertThat([sut nextReminderId], is(equalTo(@4)));
 }
 
 -(void)tearDown {
