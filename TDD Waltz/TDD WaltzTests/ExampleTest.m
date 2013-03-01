@@ -59,6 +59,13 @@
     assertThat([sut nextReminderId], is(equalTo(@4)));
 }
 
+- (void)testNextReminderIdWithNoCurrentReminderIdUserDefaultsShouldSaveOneGreaterInIUserDefaults {
+    
+    [self setUpUserDefaultsWithCurrentReminderId:@3];
+    [sut nextReminderId];
+    [verify(mockUserDefaults)setObject:@4 forKey:@"currentReminderId"];
+}
+
 -(void)tearDown {
     
     sut = nil;
