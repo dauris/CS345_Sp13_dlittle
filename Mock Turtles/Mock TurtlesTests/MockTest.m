@@ -37,7 +37,7 @@
 - (void)setUp
 {
     [super setUp];
-    sut = mock([NSArray class]);
+    sut = mock([NSDictionary class]);
 }
 
 - (void)tearDown
@@ -49,7 +49,7 @@
 - (void)testStubbedValueForKey
 {
     // given
-    //TODO: Prepare our S.U.T. to return 'Bouffant' as the value for 'Bulbous'
+    [sut setKey:@"Bouffant"];
 
     // when
     id value = [sut valueForKey:@"Bulbous"];
@@ -69,10 +69,10 @@
         [element setValue:@"Lubber" forKey:@"Acadamia"];
 //        [element setValue:@"Blubber" forKey:@"Macadamia"]; //Should fail when this line is commented out, pass when it's not
     }
-
+    
     // then
     // TODO: Verify that our S.U.T. had a -setValue:forKey: message sent to it
-    verify(sut)
+    [verifyCount(sut, atLeast(3)) setValue:nil forKey:nil];
 }
 
 -(void)testWhenStage
