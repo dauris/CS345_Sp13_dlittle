@@ -4,6 +4,8 @@
 
 #import "Example.h"
 
+static NSString* const currentReminderIdKey = @"currentReminderId";
+
 @implementation Example {
     
     NSUserDefaults* _userDefaults;
@@ -20,13 +22,19 @@
 
 -(NSNumber*)nextReminderId {
     
-    NSNumber* reminderId = [_userDefaults objectForKey:@"currentReminder"];
+    NSNumber* reminderId = [self determineNextreminderIdFromUserDefaults];
+    [_userDefaults setObject:reminderId forKey: currentReminderIdKey];
+    return reminderId;
+}
+
+-(NSNumber*) determineNextreminderIdFromUserDefaults {
+    
+    NSNumber* reminderId = [_userDefaults objectForKey: currentReminderIdKey];
     if (reminderId) {
-        reminderId = @([reminderId integerValue] + 1);
+        return @([reminderId integerValue] + 1);
     }
     else
-        reminderId = @0;
-        [_userDefaults setObject:reminderId forKey:@"currentReminderId"];
-        return reminderId;
+        return @0;
 }
+
 @end
