@@ -16,6 +16,6 @@
 
 @property NSString* operationPending;
 
--(void)pressKey:(char) Q;
+-(void)pressKey:(char) p;
 
 @end

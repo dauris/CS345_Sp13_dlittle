@@ -137,7 +137,7 @@
     //refactoring
     [self buttonResponse:sender
            actionExcuted:NSStringFromSelector(_cmd)
-                 keyText:@(+)
+                 keyText:@"Add"
                  keyChar:'+'];
 }
 
@@ -145,7 +145,7 @@
     //refactoring
     [self buttonResponse:sender
            actionExcuted:NSStringFromSelector(_cmd)
-                 keyText:@(-)
+                 keyText:@"Subtract"
                  keyChar:'-'];
 }
 
@@ -153,7 +153,7 @@
     //refactoring
     [self buttonResponse:sender
            actionExcuted:NSStringFromSelector(_cmd)
-                 keyText:@(*)4
+                 keyText:@"Multiply"
                  keyChar:'*'];
 }
 
@@ -161,7 +161,7 @@
     //refactoring
     [self buttonResponse:sender
            actionExcuted:NSStringFromSelector(_cmd)
-                 keyText:@(/)
+                 keyText:@"Divide"
                  keyChar:'/'];
 }
 

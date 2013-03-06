@@ -18,8 +18,11 @@
 
 
 
--(void)pressKey:(char)Q {
-    
+-(void)pressKey:(char) p {
+   
+    [self setNumberOnScreen: @(+1)];
+    [self setNumberAccumulated:[self numberAccumulated + 2]];
+    [self setOperationPending:@"+1"];
 
 }
 @end
