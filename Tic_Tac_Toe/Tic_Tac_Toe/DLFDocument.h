@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 Dauris Little. All rights reserved.
 //
 
-#import "CSTGameModel.h"
+#import "DLFGameBoard.h"
 #import <Cocoa/Cocoa.h>
 
 @interface DLFDocument : NSDocument
 
-//@property (weak) IBOutlet TicTacToeBoard *gameBoard;
+@property (weak) IBOutlet DLFGameBoard *ticTacToeBoard;
+
 
 @end

@@ -1,5 +1,5 @@
 //
-//  DLFGameBoard.h
+//  DLFTicTacToe_X.h
 //  Tic_Tac_Toe
 //
 //  Created by Dauris Little on 5/7/13.
@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CSTInterfaceGameModel.h"
-@interface DLFGameBoard : NSImageView
 
-- (void) gridDrawn;
+@interface DLFTicTacToe_X : NSImageView
+
+-(void) setTO_X;
 
 @end
