@@ -11,6 +11,6 @@
 
 @interface DLFDocument : NSDocument
 
-@property (weak) IBOutlet TicTacToeBoard *gameBoard;
+//@property (weak) IBOutlet TicTacToeBoard *gameBoard;
 
 @end

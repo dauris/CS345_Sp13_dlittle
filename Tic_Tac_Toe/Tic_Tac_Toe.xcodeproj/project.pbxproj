@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E84EA831738C8750005AE37 /* batman.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA7F1738C8750005AE37 /* batman.png */; };
+		9E84EA841738C8750005AE37 /* batmanLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA801738C8750005AE37 /* batmanLogo.png */; };
+		9E84EA851738C8750005AE37 /* joker.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA811738C8750005AE37 /* joker.png */; };
+		9E84EA861738C8750005AE37 /* jokerCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA821738C8750005AE37 /* jokerCard.png */; };
+		9E84EA8D1738D6580005AE37 /* DLFGameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E84EA8C1738D6580005AE37 /* DLFGameBoard.m */; };
 		ACE0B1AE17381D8D00D44DCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE0B1AD17381D8D00D44DCC /* Cocoa.framework */; };
 		ACE0B1B817381D8D00D44DCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACE0B1B617381D8D00D44DCC /* InfoPlist.strings */; };
 		ACE0B1BA17381D8D00D44DCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE0B1B917381D8D00D44DCC /* main.m */; };
@@ -35,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E84EA7F1738C8750005AE37 /* batman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman.png; sourceTree = "<group>"; };
+		9E84EA801738C8750005AE37 /* batmanLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batmanLogo.png; sourceTree = "<group>"; };
+		9E84EA811738C8750005AE37 /* joker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joker.png; sourceTree = "<group>"; };
+		9E84EA821738C8750005AE37 /* jokerCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jokerCard.png; sourceTree = "<group>"; };
+		9E84EA8B1738D6580005AE37 /* DLFGameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFGameBoard.h; sourceTree = "<group>"; };
+		9E84EA8C1738D6580005AE37 /* DLFGameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFGameBoard.m; sourceTree = "<group>"; };
 		ACE0B1AA17381D8D00D44DCC /* Tic_Tac_Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tic_Tac_Toe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE0B1AD17381D8D00D44DCC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		ACE0B1B017381D8D00D44DCC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +100,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E84EA7E1738C8750005AE37 /* projectImages */ = {
+			isa = PBXGroup;
+			children = (
+				9E84EA7F1738C8750005AE37 /* batman.png */,
+				9E84EA801738C8750005AE37 /* batmanLogo.png */,
+				9E84EA811738C8750005AE37 /* joker.png */,
+				9E84EA821738C8750005AE37 /* jokerCard.png */,
+			);
+			path = projectImages;
+			sourceTree = "<group>";
+		};
+		9E84EA871738CF0C0005AE37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E84EA8B1738D6580005AE37 /* DLFGameBoard.h */,
+				9E84EA8C1738D6580005AE37 /* DLFGameBoard.m */,
+			);
+			name = Controller;
+			path = Tic_Tac_Toe;
+			sourceTree = "<group>";
+		};
 		ACE0B1A117381D8D00D44DCC = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +206,8 @@
 		ACE0B1E517381DED00D44DCC /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9E84EA871738CF0C0005AE37 /* Controller */,
+				9E84EA7E1738C8750005AE37 /* projectImages */,
 				ACE0B1E617381E0000D44DCC /* TTTModel */,
 				ACE0B1B317381D8D00D44DCC /* Tic_Tac_Toe */,
 			);
@@ -274,6 +308,10 @@
 				ACE0B1BE17381D8D00D44DCC /* Credits.rtf in Resources */,
 				ACE0B1C417381D8D00D44DCC /* DLFDocument.xib in Resources */,
 				ACE0B1C717381D8D00D44DCC /* MainMenu.xib in Resources */,
+				9E84EA831738C8750005AE37 /* batman.png in Resources */,
+				9E84EA841738C8750005AE37 /* batmanLogo.png in Resources */,
+				9E84EA851738C8750005AE37 /* joker.png in Resources */,
+				9E84EA861738C8750005AE37 /* jokerCard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +352,7 @@
 				ACE0B1F317381E0100D44DCC /* CSTGameModel.m in Sources */,
 				ACE0B1F417381E0100D44DCC /* CSTLocation.m in Sources */,
 				ACE0B1F517381E0100D44DCC /* CSTMove.m in Sources */,
+				9E84EA8D1738D6580005AE37 /* DLFGameBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +550,7 @@
 				ACE0B1E017381D8D00D44DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACE0B1E117381D8D00D44DCC /* Build configuration list for PBXNativeTarget "Tic_Tac_ToeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +559,7 @@
 				ACE0B1E317381D8D00D44DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
