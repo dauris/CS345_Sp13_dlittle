@@ -10,15 +10,15 @@
 #import "CSTLocation.h"
 
 const int boardSize = 500;
-const int gridSquare = 9;
+const int gridSquare = 2;
 const int gridSize = boardSize/(gridSquare + 1);
 
 @implementation DLFGameBoard
 {
-    
     NSMapTable *mapTable;
     NSMutableArray *twoArray;
 }
+
 - (id)initWithFrame:(NSRect)frameRect
 {
     self = [super initWithFrame:frameRect];
@@ -51,6 +51,7 @@ const int gridSize = boardSize/(gridSquare + 1);
     }
     return self;
 }
+
 -(void) drawRect: (NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
@@ -65,6 +66,13 @@ const int gridSize = boardSize/(gridSquare + 1);
     
     for (int i = 0; i <= boardSize+gridSize; i+=gridSize) {
         startPoint = NSMakePoint(i, 0);
+        endPoint = NSMakePoint(i, boardSize);
+        [path moveToPoint:startPoint];
+        [path lineToPoint:endPoint];
+    }
+    
+    for (int i = 0; i < boardSize + gridSize; i += gridSize) {
+        startPoint = NSMakePoint(0, i);
         endPoint = NSMakePoint(i, boardSize);
         [path moveToPoint:startPoint];
         [path lineToPoint:endPoint];

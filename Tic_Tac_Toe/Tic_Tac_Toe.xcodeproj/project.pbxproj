@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E38ECAC173973AE00BF792C /* gothamCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E38ECAB173973AE00BF792C /* gothamCity.png */; };
+		9E38ECAE1739891400BF792C /* gothamCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E38ECAD1739891400BF792C /* gothamCity.png */; };
 		9E84EA831738C8750005AE37 /* batman.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA7F1738C8750005AE37 /* batman.png */; };
 		9E84EA841738C8750005AE37 /* batmanLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA801738C8750005AE37 /* batmanLogo.png */; };
 		9E84EA851738C8750005AE37 /* joker.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E84EA811738C8750005AE37 /* joker.png */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E38ECAB173973AE00BF792C /* gothamCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gothamCity.png; sourceTree = "<group>"; };
+		9E38ECAD1739891400BF792C /* gothamCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gothamCity.png; sourceTree = "<group>"; };
 		9E84EA7F1738C8750005AE37 /* batman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman.png; sourceTree = "<group>"; };
 		9E84EA801738C8750005AE37 /* batmanLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batmanLogo.png; sourceTree = "<group>"; };
 		9E84EA811738C8750005AE37 /* joker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joker.png; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		9E84EA7E1738C8750005AE37 /* projectImages */ = {
 			isa = PBXGroup;
 			children = (
-				9E38ECAB173973AE00BF792C /* gothamCity.png */,
+				9E38ECAD1739891400BF792C /* gothamCity.png */,
 				9E84EA7F1738C8750005AE37 /* batman.png */,
 				9E84EA801738C8750005AE37 /* batmanLogo.png */,
 				9E84EA811738C8750005AE37 /* joker.png */,
@@ -325,7 +325,7 @@
 				9E84EA841738C8750005AE37 /* batmanLogo.png in Resources */,
 				9E84EA851738C8750005AE37 /* joker.png in Resources */,
 				9E84EA861738C8750005AE37 /* jokerCard.png in Resources */,
-				9E38ECAC173973AE00BF792C /* gothamCity.png in Resources */,
+				9E38ECAE1739891400BF792C /* gothamCity.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
