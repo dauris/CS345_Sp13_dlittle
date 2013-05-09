@@ -12,4 +12,6 @@
 
 - (void) gridDrawn;
 
+@property (readwrite, weak) IBOutlet id<CSTInterfaceGameModel> dataSurce;
+
 @end

@@ -27,6 +27,10 @@ return self;
     NSImage *associatedImage;
     associatedImage = [NSImage imageNamed:@"joker.png"];
     
+    //NSPoint clickSquare = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    
+    [super mouseDown:theEvent];
+    [self needsDisplay];
 
 }
 @end

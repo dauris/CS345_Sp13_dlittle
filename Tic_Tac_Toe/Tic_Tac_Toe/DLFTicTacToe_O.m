@@ -23,5 +23,10 @@
 {
     NSImage *associatedImage;
     associatedImage = [NSImage imageNamed:@"batmanLogo.png"];
+    
+    //NSPoint clickSquare = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    
+    [super mouseDown:theEvent];
+    [self needsDisplay];
 }
 @end

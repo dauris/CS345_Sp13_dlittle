@@ -8,6 +8,7 @@
 
 #import "DLFGameBoard.h"
 #import "CSTLocation.h"
+#import "DLFSquareSpot.h"
 
 const int boardSize = 500;
 const int gridSquare = 2;
@@ -73,13 +74,14 @@ const int gridSize = boardSize/(gridSquare + 1);
     
     for (int i = 0; i < boardSize + gridSize; i += gridSize) {
         startPoint = NSMakePoint(0, i);
-        endPoint = NSMakePoint(i, boardSize);
+        endPoint = NSMakePoint(boardSize, i);
         [path moveToPoint:startPoint];
         [path lineToPoint:endPoint];
     }
     
-    [[NSColor blackColor] set];
+    [[NSColor redColor] set];
     [path setLineWidth:2];
     [path stroke];
 }
+
 @end
