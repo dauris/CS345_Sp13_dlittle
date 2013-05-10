@@ -97,6 +97,16 @@ const int gridSize = boardSize/(gridSquare + 1);
 - (BOOL)isWho:(NSString *)whichPlayer legalAtSquare:(DLFSquareSpot *)whichSquare
 {
     id <CSTInterfaceLocation> where = [self locationofSquare:whichSquare];
-    //return [[self dataSource]];
+    
+    return [[self datasource] isLegalFor:whichPlayer toMoveAtX:[where x] andY:[where y]];
 }
+
+- (void)dropPlayer:(NSString *)whichPlayer ontoSquare:(DLFSquareSpot *)whichSquare
+{
+    id <CSTInterfaceLocation> where = [self locationofSquare:whichSquare];
+    
+    return [[self datasource] executeMoveBy:whichPlayer atX:[where x] andY:[where y]];
+}
+
+
 @end

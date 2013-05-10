@@ -15,6 +15,7 @@
 		9E84EA8D1738D6580005AE37 /* DLFGameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E84EA8C1738D6580005AE37 /* DLFGameBoard.m */; };
 		9E90D06B1739513D00600F94 /* DLFTicTacToe_X.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90D06A1739513D00600F94 /* DLFTicTacToe_X.m */; };
 		9E90D06E1739515700600F94 /* DLFTicTacToe_O.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90D06D1739515700600F94 /* DLFTicTacToe_O.m */; };
+		9E93696F173D3AA50004B857 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E93696E173D3AA50004B857 /* square.png */; };
 		9EBBC5BC173B79D500C45EBE /* DLFSquareSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBC5BB173B79D500C45EBE /* DLFSquareSpot.m */; };
 		ACE0B1AE17381D8D00D44DCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE0B1AD17381D8D00D44DCC /* Cocoa.framework */; };
 		ACE0B1B817381D8D00D44DCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACE0B1B617381D8D00D44DCC /* InfoPlist.strings */; };
@@ -56,6 +57,8 @@
 		9E90D06A1739513D00600F94 /* DLFTicTacToe_X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFTicTacToe_X.m; sourceTree = "<group>"; };
 		9E90D06C1739515700600F94 /* DLFTicTacToe_O.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFTicTacToe_O.h; sourceTree = "<group>"; };
 		9E90D06D1739515700600F94 /* DLFTicTacToe_O.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFTicTacToe_O.m; sourceTree = "<group>"; };
+		9E93696E173D3AA50004B857 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		9E936972173D40FA0004B857 /* DLFGameBoardDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DLFGameBoardDelegate.h; path = Tic_Tac_Toe/DLFGameBoardDelegate.h; sourceTree = "<group>"; };
 		9EBBC5BA173B79D500C45EBE /* DLFSquareSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFSquareSpot.h; sourceTree = "<group>"; };
 		9EBBC5BB173B79D500C45EBE /* DLFSquareSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFSquareSpot.m; sourceTree = "<group>"; };
 		ACE0B1AA17381D8D00D44DCC /* Tic_Tac_Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tic_Tac_Toe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,7 @@
 		9E84EA7E1738C8750005AE37 /* projectImages */ = {
 			isa = PBXGroup;
 			children = (
+				9E93696E173D3AA50004B857 /* square.png */,
 				9E38ECAD1739891400BF792C /* gothamCity.png */,
 				9E84EA7F1738C8750005AE37 /* batman.png */,
 				9E84EA801738C8750005AE37 /* batmanLogo.png */,
@@ -139,6 +143,14 @@
 			);
 			name = View;
 			path = Tic_Tac_Toe;
+			sourceTree = "<group>";
+		};
+		9E936970173D3C540004B857 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E936972173D40FA0004B857 /* DLFGameBoardDelegate.h */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		ACE0B1A117381D8D00D44DCC = {
@@ -226,6 +238,7 @@
 		ACE0B1E517381DED00D44DCC /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9E936970173D3C540004B857 /* Controller */,
 				9E84EA871738CF0C0005AE37 /* View */,
 				9E84EA7E1738C8750005AE37 /* projectImages */,
 				ACE0B1E617381E0000D44DCC /* TTTModel */,
@@ -333,6 +346,7 @@
 				9E84EA851738C8750005AE37 /* joker.png in Resources */,
 				9E84EA861738C8750005AE37 /* jokerCard.png in Resources */,
 				9E38ECAE1739891400BF792C /* gothamCity.png in Resources */,
+				9E93696F173D3AA50004B857 /* square.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

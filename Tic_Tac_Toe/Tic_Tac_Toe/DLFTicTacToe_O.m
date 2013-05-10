@@ -9,6 +9,9 @@
 #import "DLFTicTacToe_O.h"
 
 @implementation DLFTicTacToe_O
+{
+    int _clicker;
+}
 
 - (id)initWithFrame:(NSRect)frameRect
 {
@@ -21,10 +24,18 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
+    _clicker += 1;
+    NSLog(@"Click %d", _clicker);
+    
+    if (_clicker / 2) {
+        [self setTo_O];
+    }
+    
     NSImage *associatedImage;
     associatedImage = [NSImage imageNamed:@"batmanLogo.png"];
+
     
-    //NSPoint clickSquare = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    
     
     [super mouseDown:theEvent];
     [self needsDisplay];

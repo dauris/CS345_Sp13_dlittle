@@ -30,6 +30,11 @@
     [self setImage:[NSImage imageNamed:@"joker.png"]];
 }
 
+- (void)emptySquare
+{
+    [self setBatOrJoke:@"Square"];
+    [self setImage:[NSImage imageNamed:@"square.png"]];
+}
 - (void)drawRect:(NSRect)dirtyRect
 {
     // Drawing code here.
@@ -46,4 +51,6 @@
     }
     return self;
 }
+
+
 @end

@@ -9,6 +9,9 @@
 #import "DLFTicTacToe_X.h"
 
 @implementation DLFTicTacToe_X
+{
+    int _clicker;
+}
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -22,12 +25,14 @@ return self;
 
 - (void) mouseDown:(NSEvent *)theEvent
 {
-    [self setTO_X];
+    _clicker += 1;
     
     NSImage *associatedImage;
     associatedImage = [NSImage imageNamed:@"joker.png"];
-    
-    //NSPoint clickSquare = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+
+    if (_clicker / 2) {
+        [self setTO_X];
+    }
     
     [super mouseDown:theEvent];
     [self needsDisplay];
