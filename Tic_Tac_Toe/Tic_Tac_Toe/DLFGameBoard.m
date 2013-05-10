@@ -20,9 +20,9 @@ const int gridSize = boardSize/(gridSquare + 1);
     NSMutableArray *twoArray;
 }
 
-- (id)initWithFrame:(NSRect)frameRect
+- (id)initWithFrame:(NSRect)frame
 {
-    self = [super initWithFrame:frameRect];
+    self = [super initWithFrame:frame];
     if (self) {
         mapTable = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsStrongMemory];
         
@@ -84,4 +84,19 @@ const int gridSize = boardSize/(gridSquare + 1);
     [path stroke];
 }
 
+- (DLFSquareSpot *) squareLocation:(id<CSTInterfaceLocation>)where
+{
+    return [[twoArray objectAtIndex:[where x]] objectAtIndex:[where y]];
+}
+
+- (id <CSTInterfaceLocation>)locationofSquare:(DLFSquareSpot *)whichSquare
+{
+    return [mapTable objectForKey:whichSquare];
+}
+
+- (BOOL)isWho:(NSString *)whichPlayer legalAtSquare:(DLFSquareSpot *)whichSquare
+{
+    id <CSTInterfaceLocation> where = [self locationofSquare:whichSquare];
+    //return [[self dataSource]];
+}
 @end

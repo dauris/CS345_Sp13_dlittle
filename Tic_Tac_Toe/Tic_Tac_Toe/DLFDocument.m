@@ -7,14 +7,23 @@
 //
 
 #import "DLFDocument.h"
+#import "CSTMove.h"
+#import "CSTInterfaceGameModel.h"
+#import "CSTGameModel.h"
 
 @implementation DLFDocument
+{
+    id <CSTInterfaceGameModel> _theModel;
+}
+
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        _theModel = [[CSTGameModel alloc] init];
+        
+        [(id)_theModel addObserver:self forKeyPath:@"gameOverState" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:NULL];
     }
     return self;
 }
@@ -55,5 +64,40 @@
     @throw exception;
     return YES;
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSString *theWinner;
+    switch ([_theModel gameOverState]) {
+        case CSTGO_WinnerOh:
+            theWinner = @"Joker";
+            break;
+        case CSTGO_WinnerEx:
+            theWinner = @"Batman";
+            break;
+        case CSTGO_CatsGame:
+            theWinner = @"Tied Game";
+            break;
+        case CSTGO_GameNotOver:
+            break;
+            
+    }
+    
+    [self popUpGameAlert:theWinner];
+}
+
+- (void)popUpGameAlert:(NSString *)winnerName
+{
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"End Game"];
+    [alert addButtonWithTitle:@"Press 'CMD N for New Game"];
+    [alert setMessageText:[NSString stringWithFormat:@"Bam! Game Over %d Wins!", CSTGO_WinnerEx]];
+    [alert setMessageText:[NSString stringWithFormat:@"Pow!!! Game Over %d Joker Wins!", CSTGO_WinnerOh]];
+    [alert setMessageText:[NSString stringWithFormat:@"Tied Game. %d No One Won", CSTGO_CatsGame]];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert runModal];
+    [self close];
+}
+
 
 @end

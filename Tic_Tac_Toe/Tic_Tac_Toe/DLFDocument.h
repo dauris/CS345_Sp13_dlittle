@@ -13,5 +13,6 @@
 
 @property (weak) IBOutlet DLFGameBoard *ticTacToeBoard;
 
+- (void)popUpGameAlert: (NSString *) winnerName;
 
 @end

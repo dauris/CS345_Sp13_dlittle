@@ -9,15 +9,13 @@
 #import "DLFSquareSpot.h"
 
 @implementation DLFSquareSpot
+{
+    id<DLFSquareHost> _gameBoard;
+}
 
 - (id)initWithFrame:(NSRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
+    return [self initWithFrame:frame andHost:nil];
 }
 
 - (void)setToBat
@@ -37,4 +35,15 @@
     // Drawing code here.
 }
 
+- (id)initWithFrame:(NSRect)frameRect andHost:(id)hostingBoard
+{
+    self = [super initWithFrame:frameRect];
+    if (self) {
+        _gameBoard = hostingBoard;
+        [self emptySquare];
+        NSArray *acceptedTypes = @[NSPasteboardTypeString];
+        [self registerForDraggedTypes:acceptedTypes];
+    }
+    return self;
+}
 @end

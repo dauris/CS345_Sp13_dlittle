@@ -51,6 +51,7 @@
 		9E84EA821738C8750005AE37 /* jokerCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jokerCard.png; sourceTree = "<group>"; };
 		9E84EA8B1738D6580005AE37 /* DLFGameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFGameBoard.h; sourceTree = "<group>"; };
 		9E84EA8C1738D6580005AE37 /* DLFGameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFGameBoard.m; sourceTree = "<group>"; };
+		9E8AE87B173CC86600BAD0BC /* DLFSquareHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLFSquareHost.h; sourceTree = "<group>"; };
 		9E90D0691739513D00600F94 /* DLFTicTacToe_X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFTicTacToe_X.h; sourceTree = "<group>"; };
 		9E90D06A1739513D00600F94 /* DLFTicTacToe_X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFTicTacToe_X.m; sourceTree = "<group>"; };
 		9E90D06C1739515700600F94 /* DLFTicTacToe_O.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFTicTacToe_O.h; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 				9E90D06D1739515700600F94 /* DLFTicTacToe_O.m */,
 				9EBBC5BA173B79D500C45EBE /* DLFSquareSpot.h */,
 				9EBBC5BB173B79D500C45EBE /* DLFSquareSpot.m */,
+				9E8AE87B173CC86600BAD0BC /* DLFSquareHost.h */,
 			);
 			name = View;
 			path = Tic_Tac_Toe;

@@ -7,11 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CSTInterfaceGameModel.h"
-@interface DLFGameBoard : NSImageView
+#import "CSTInterfaceLocation.h"
+#import "DLFSquareHost.h"
+@interface DLFGameBoard : NSImageView <DLFSquareHost>
 
 - (void) gridDrawn;
 
-@property (readwrite, weak) IBOutlet id<CSTInterfaceGameModel> dataSurce;
+- (DLFSquareSpot *)squareLocation: (id<CSTInterfaceLocation>) where;
+
+- (id <CSTInterfaceLocation>)locationofSquare: (DLFSquareSpot *) whichSquare;
 
 @end

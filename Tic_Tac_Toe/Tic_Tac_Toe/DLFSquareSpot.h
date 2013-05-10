@@ -7,13 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DLFSquareHost.h"
+#import <Foundation/Foundation.h>
 
 @interface DLFSquareSpot : NSImageView
 
 @property (strong) NSString *batOrJoke;
 
--(void)setToBat;
--(void)setToJoke;
--(void)emptySquare;
+- (void)setToBat;
+
+- (void)setToJoke;
+
+- (void)emptySquare;
+
+- (id)initWithFrame:(NSRect)frameRect
+            andHost:(id <DLFSquareHost>) hostingBoard;
 
 @end
